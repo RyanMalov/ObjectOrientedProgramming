@@ -36,22 +36,12 @@ enum Suit
 	Spades
 };
 
-// enum class Suit2
-// {
-	// Hearts2,
-	// Diamonds2,
-	// Clubs2,
-	// Spades2
-// };
-
 class Card
 {
 	Card(Rank r, Suit s)
 	: rank(r), suit(s)
-	{};
+	{}
+	private:
+	Rank rank;
+	Suit suit;
 };
-
-// void f()
-// {
-	// Card c {Ace, Spades};
-// }
