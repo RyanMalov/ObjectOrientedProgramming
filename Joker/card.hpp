@@ -1,5 +1,9 @@
 //Ryan Malov Joker Card class practice
 
+#include <cassert>
+#include <iosfwd>
+#include <vector>
+
 enum Rank
 {
 	Ace,
