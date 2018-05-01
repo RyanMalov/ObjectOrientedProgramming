@@ -1,5 +1,17 @@
 //This file will create and handle the units used in the game
 
+#pragma once
+
+#include <iosfwd>
+
+
+//Define the types of players in the game
+enum Owner
+{
+	Unknown,
+	User,
+	Comp
+};
 
 //Define the unit pieces in the game
 enum Units
@@ -13,9 +25,9 @@ enum Units
 	Carrier,
 	Battleship,
 	Satellite,
-	Num_objects,
-	Nopiece
-}
+	NumObjects,
+	NoPiece
+};
 
 //Defines the types of movement available
 enum UnitMovement
@@ -28,7 +40,7 @@ enum UnitMovement
 	SouthWest,
 	West,
 	NorthWest
-}
+};
 
 //Used for Special Movement
 //Original Program uses negative numbers for this,
@@ -54,9 +66,16 @@ enum SpecMovement
 	Move_SW,
 	Move_W,
 	Move_NW
-}
+};
 
-//Create a structure which uses a doubly linked list
+//Actions a unit can make
+enum Action
+{
+	Attack,
+	Sleep,
+	Wait,
+	Delete,
+};
 
 
 
