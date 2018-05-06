@@ -14,7 +14,7 @@ enum Owner
 };
 
 //Define the unit pieces in the game
-enum Units
+enum UnitType
 {
 	Army,
 	Fighter,
@@ -47,19 +47,19 @@ enum UnitMovement
 //might need to change in the future.
 enum SpecMovement
 {
-	NoFunc,
-	Random,
-	Sentry,
-	Fill,
-	Land,
-	Explore,
-	ArmyLoad,
-	ArmyAttack,
-	TTload,
-	Repair,
-	WFtransport,
-	Move_N,
-	Move_NE,
+	NOFUNC,
+	RANDOM,
+	SENTRY,
+	FILL,
+	LAND,
+	EXPLORE,
+	ARMYLOAD,
+	ARMYATTACK,
+	TTLOAD,
+	REPAIR,
+	WFTRANSPORT,
+	MOVE_N,
+	MOVE_NE,
 	Move_E,
 	Move_SE,
 	Move_S,
@@ -77,6 +77,39 @@ enum Action
 	Delete,
 };
 
+//Create the unit class. This will hold all global functions and variables
+class Unit
+{
+	Unit(Owner Own, Type t, int BTime, int Health, int Str, int Move, int Rang, int Capac)
+	: owner(Own), type(t), BuiltTime(BTime), HP(Health), Strength(Str), Moves(Move), Range(Rang), Capacity(Capac)
+	{}
+
+	private:
+		
+		//Unit Properties
+		Owner owner;		//Who owns the unit
+		Type type;			//What type of unit it is
+		int BuildTime;		//How long the build time is
+		int Strength;		//How strong a unit is
+		int HP;				//How much Health a unit has
+		int Moves;			//Amount of moves a unit can take (per turn)
+		int Range;			//The range of a given unit
+		int Capacity;		//How many other units a given unit can hold (Carrier, Battleship, etc.)
+
+	protected:
+
+		//Commands allowed to be given to units
+		bool Random();
+		bool Sentry();
+		bool Fill();
+		bool land();
+		bool Explore();
+		bool ArmyLoad();
+		bool ArmyAttack();
+		bool Repair();
+		bool WFTransport();
+		bool Move(const Direction Dir);
+};
 
 
 
