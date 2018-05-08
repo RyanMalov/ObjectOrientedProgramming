@@ -3,7 +3,7 @@
 #pragma once
 
 #include <iosfwd>
-
+#include <algorithm>
 
 //Define the types of players in the game
 enum Owner
@@ -62,6 +62,8 @@ enum SpecMovement
 	MOVE_NE,
 	MOVE_E,
 	MOVE_SE,
+	MOVE_S,
+	MOVE_SW,
 	MOVE_W,
 	MOVE_NW
 };
