@@ -82,4 +82,23 @@ bool Army::Action(const SpecMovement Command)
 }
 
 //Do the exact same things for the remaining types of units
+bool Fighter::Action(const SpecMovement Command)
+{
+	//Same as Army
+}
 
+bool Patrol::Action(const SpecMovement Command)
+{
+	//Same as above
+}
+
+bool Destoryer::Action(const SpecMovement Command)
+{
+
+}
+
+bool Submarine
+bool Transport
+bool Carrier
+bool Battleship
+bool Satellite
