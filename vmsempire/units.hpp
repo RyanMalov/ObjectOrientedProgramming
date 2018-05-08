@@ -189,7 +189,7 @@ class Unit
 };
 
 //Subclass for Army
-class Army : public Unit
+struct Army : public Unit
 {
 	Army(Owner Own, std::pair<int, int> locat)
 	: Unit(Own, ARMY, 5, 1, 1, 1, 0, 0), Location(locat)
