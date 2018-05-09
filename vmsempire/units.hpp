@@ -179,7 +179,7 @@ class Unit
 		bool Random();
 		bool Sentry();
 		bool Fill();
-		bool land();
+		bool Land();
 		bool Explore();
 		bool ArmyLoad();
 		bool ArmyAttack();
@@ -189,7 +189,7 @@ class Unit
 };
 
 //Subclass for Army
-struct Army : public Unit
+class Army : public Unit
 {
 	Army(Owner Own, std::pair<int, int> locat)
 	: Unit(Own, ARMY, 5, 1, 1, 1, 0, 0), Location(locat)

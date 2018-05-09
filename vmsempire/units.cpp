@@ -16,6 +16,41 @@ bool Unit::ArmyAttack()
 	assert(this -> type == ARMY);
 }
 
+bool Unit::Random()
+{
+
+}
+
+bool Unit::Sentry()
+{
+
+}
+
+bool Unit::Land()
+{
+
+}
+
+bool Unit::Explore()
+{
+
+}
+
+bool Unit::Repair()
+{
+
+}
+
+bool Unit::WFTransport()
+{
+
+}
+
+bool Unit::Move(const UnitMovement Dir)
+{
+
+}
+
 //Subclass functions (things they can do)
 bool Army::Action(const SpecMovement Command)
 {
@@ -92,13 +127,28 @@ bool Patrol::Action(const SpecMovement Command)
 	//Same as above
 }
 
-bool Destoryer::Action(const SpecMovement Command)
+bool Destroyer::Action(const SpecMovement Command)
 {
 
 }
 
-bool Submarine
-bool Transport
-bool Carrier
-bool Battleship
-bool Satellite
+bool Submarine::Action(const SpecMovement Command)
+{
+
+}
+bool Transport::Action(const SpecMovement Command)
+{
+
+}
+bool Carrier::Action(const SpecMovement Command)
+{
+
+}
+bool Battleship::Action(const SpecMovement Command)
+{
+
+}
+bool Satellite::Action(const SpecMovement Command)
+{
+
+}
